@@ -1,0 +1,6 @@
+target/
+*off
+database_exports
+generated-utterances/*.txt
+.DS_Store
+*.pem

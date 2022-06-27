@@ -1,0 +1,1045 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "food diary",
+            "modelConfiguration": {
+                "fallbackIntentSensitivity": {
+                    "level": "LOW"
+                }
+            },
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "IntakeIntent",
+                    "slots": [
+                        {
+                            "name": "intake",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "yes add item {intake}",
+                        "add item {intake}"
+                    ]
+                },
+                {
+                    "name": "ClearConsumptionEventIntent",
+                    "slots": [],
+                    "samples": [
+                        "start over",
+                        "start again",
+                        "cancel snack",
+                        "cancel meal",
+                        "clear event"
+                    ]
+                },
+                {
+                    "name": "ConsumptionDateAndTimeIntent",
+                    "slots": [
+                        {
+                            "name": "intake_time",
+                            "type": "AMAZON.TIME"
+                        },
+                        {
+                            "name": "num_hours",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "num_mins",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "num_days",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "intake_date",
+                            "type": "AMAZON.DATE"
+                        },
+                        {
+                            "name": "relative_day",
+                            "type": "MILLARD_relative_day"
+                        },
+                        {
+                            "name": "just_time",
+                            "type": "MILLARD_just_time"
+                        },
+                        {
+                            "name": "fraction_hour",
+                            "type": "MILLARD_fraction"
+                        }
+                    ],
+                    "samples": [
+                        "{fraction_hour} an hour ago",
+                        "{just_time}",
+                        "{intake_time}",
+                        "{relative_day}",
+                        "{intake_date}",
+                        "{intake_date} at {intake_time} {num_days} days ago",
+                        "at {intake_time} {intake_date}",
+                        "at {intake_time} {relative_day}",
+                        "{relative_day} at {intake_time}",
+                        "{intake_time} {intake_date}",
+                        "{intake_date}  at {intake_time}",
+                        "{num_days} days ago at {intake_time}",
+                        "about {num_mins} minutes ago",
+                        "about {num_hours} hours ago",
+                        "around {num_hours} hours ago",
+                        "around {num_mins} minutes ago",
+                        "{num_mins} minutes ago",
+                        "{num_hours} hours ago"
+                    ]
+                },
+                {
+                    "name": "SubmitEventIntent",
+                    "slots": [],
+                    "samples": [
+                        "submit",
+                        "save event",
+                        "save snack",
+                        "submit snack",
+                        "submit meal",
+                        "submit event"
+                    ]
+                },
+                {
+                    "name": "YesNoIntent",
+                    "slots": [
+                        {
+                            "name": "yes_or_no",
+                            "type": "MILLARD_yesno"
+                        }
+                    ],
+                    "samples": [
+                        "{yes_or_no}"
+                    ]
+                },
+                {
+                    "name": "FactIntent",
+                    "slots": [],
+                    "samples": [
+                        "i'd like an airplane fact",
+                        "i'd like a fact please",
+                        "tell me a fact",
+                        "give me a airplane fact",
+                        "tell me a airplane fact"
+                    ]
+                },
+                {
+                    "name": "RDSTestIntent",
+                    "slots": [],
+                    "samples": [
+                        "test database ",
+                        "database test"
+                    ]
+                },
+                {
+                    "name": "ClearLastItemIntent",
+                    "slots": [],
+                    "samples": [
+                        "remove last element",
+                        "remove last item",
+                        "delete last element",
+                        "delete last item",
+                        "cancel last element",
+                        "clear last element",
+                        "clear last item",
+                        "cancel last item"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "MILLARD_drink_quantity",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "half",
+                                "synonyms": [
+                                    "halves"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "small mug",
+                                "synonyms": [
+                                    "small mugs"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "large mug",
+                                "synonyms": [
+                                    "large mugs"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "espresso"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "mug",
+                                "synonyms": [
+                                    "mugs"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pitcher",
+                                "synonyms": [
+                                    "pitchers"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "half a can",
+                                "synonyms": [
+                                    "half can"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "half a bottle",
+                                "synonyms": [
+                                    "half bottles",
+                                    "half bottle"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "half a cup",
+                                "synonyms": [
+                                    "half cups",
+                                    "half cup"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "half a yard",
+                                "synonyms": [
+                                    "half yard",
+                                    "half yards"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "stein",
+                                "synonyms": [
+                                    "steins"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "yard",
+                                "synonyms": [
+                                    "yards"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "250 mili litre can",
+                                "synonyms": [
+                                    "250 mili litres",
+                                    "250ml can"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "330 mili litre can",
+                                "synonyms": [
+                                    "330 mili litre cans",
+                                    "330ml cans"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "large cup",
+                                "synonyms": [
+                                    "large cups"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "medium cup",
+                                "synonyms": [
+                                    "medium cups"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "small cup",
+                                "synonyms": [
+                                    "small cups"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "large glass",
+                                "synonyms": [
+                                    "large glasses"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "medium glass",
+                                "synonyms": [
+                                    "medium glasses"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "small glass",
+                                "synonyms": [
+                                    "small glasses"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "large wine glass",
+                                "synonyms": [
+                                    "large wine glasses"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "medium wine glass",
+                                "synonyms": [
+                                    "medium wine glasses"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "small wine glass",
+                                "synonyms": [
+                                    "small wine glasses"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "wine glass",
+                                "synonyms": [
+                                    "wine glasses"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "shot",
+                                "synonyms": [
+                                    "shots",
+                                    "shot glass"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sip",
+                                "synonyms": [
+                                    "sips"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "carton",
+                                "synonyms": [
+                                    "cartons"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "can",
+                                "synonyms": [
+                                    "cans"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "half a pint",
+                                "synonyms": [
+                                    "half pint"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "half a glass",
+                                "synonyms": [
+                                    "half glasses",
+                                    "half glass"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bottle",
+                                "synonyms": [
+                                    "bottles"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cup",
+                                "synonyms": [
+                                    "cups"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "pint",
+                                "synonyms": [
+                                    "pints"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "glass",
+                                "synonyms": [
+                                    "glasses"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MILLARD_food_quantity",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "bunch",
+                                "synonyms": [
+                                    "bunches"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "large slice",
+                                "synonyms": [
+                                    "large slices"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "medium slice",
+                                "synonyms": [
+                                    "medium slices"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "small slice",
+                                "synonyms": [
+                                    "small slices"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "large piece",
+                                "synonyms": [
+                                    "large pieces"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "medium piece",
+                                "synonyms": [
+                                    "medium pieces"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "small piece",
+                                "synonyms": [
+                                    "small pieces"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "large segment",
+                                "synonyms": [
+                                    "large segments"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "medium segment",
+                                "synonyms": [
+                                    "medium segments"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "small segment",
+                                "synonyms": [
+                                    "small segments"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "large plate",
+                                "synonyms": [
+                                    "large plates"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "medium plate",
+                                "synonyms": [
+                                    "medium plates"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "small plate",
+                                "synonyms": [
+                                    "small plates"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "large bowl",
+                                "synonyms": [
+                                    "large bowls"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "medium bowl",
+                                "synonyms": [
+                                    "medium bowls"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "small bowl",
+                                "synonyms": [
+                                    "small bowls"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "medium handful",
+                                "synonyms": [
+                                    "medium handfuls"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "large handful",
+                                "synonyms": [
+                                    "large handfuls"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "small handful",
+                                "synonyms": [
+                                    "small handfuls"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "large packet",
+                                "synonyms": [
+                                    "large packets"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "medium packet",
+                                "synonyms": [
+                                    "medium packets"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "small packet",
+                                "synonyms": [
+                                    "small packets"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "large bag",
+                                "synonyms": [
+                                    "large bags"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "medium bag",
+                                "synonyms": [
+                                    "standard bag",
+                                    "standard bags",
+                                    "medium bags"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "small bag",
+                                "synonyms": [
+                                    "small bags"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "family size"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "large box",
+                                "synonyms": [
+                                    "large boxes"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "medium box",
+                                "synonyms": [
+                                    "medium boxes"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "small box",
+                                "synonyms": [
+                                    "small boxes"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bar",
+                                "synonyms": [
+                                    "bars"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "grab bag",
+                                "synonyms": [
+                                    "grab bags"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "box",
+                                "synonyms": [
+                                    "boxes"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "cube",
+                                "synonyms": [
+                                    "cubes"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bag",
+                                "synonyms": [
+                                    "bags"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "container",
+                                "synonyms": [
+                                    "containers"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "packet",
+                                "synonyms": [
+                                    "packets"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "handful",
+                                "synonyms": [
+                                    "handfuls"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "segment",
+                                "synonyms": [
+                                    "segments"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "slice",
+                                "synonyms": [
+                                    "slices"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "piece",
+                                "synonyms": [
+                                    "pieces"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "bowl",
+                                "synonyms": [
+                                    "bowls"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "plate",
+                                "synonyms": [
+                                    "plates"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MILLARD_yesno",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "no",
+                                "synonyms": [
+                                    "nah",
+                                    "no ta",
+                                    "nope",
+                                    "no I don't",
+                                    "no thanks",
+                                    "no I did not",
+                                    "I didn't",
+                                    "I did not"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "yes",
+                                "synonyms": [
+                                    "sure",
+                                    "yes ta",
+                                    "yes please",
+                                    "yes I do",
+                                    "yup",
+                                    "yeah",
+                                    "yes I did",
+                                    "I did"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MILLARD_singular_a",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "a",
+                                "synonyms": [
+                                    "an"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MILLARD_relative_day",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "the day before yesterday"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "yesterday afternoon",
+                                "synonyms": [
+                                    "last night"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "yesterday morning"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "this morning"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "this afternoon",
+                                "synonyms": [
+                                    "tonight"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MILLARD_just_time",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "now"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "just now"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "just",
+                                "synonyms": [
+                                    "just now"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MILLARD_quantity_wordy",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "four fifths of a",
+                                "synonyms": [
+                                    "four fifths"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "three fifths of a",
+                                "synonyms": [
+                                    "three fifths"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "two fifths of a",
+                                "synonyms": [
+                                    "two fifths"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "one fifth of a",
+                                "synonyms": [
+                                    "a fifth of a"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "three quarters of a",
+                                "synonyms": [
+                                    "three quarters"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "two quarters of a",
+                                "synonyms": [
+                                    "two quarters"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "one quarter of a",
+                                "synonyms": [
+                                    "a quarter of a",
+                                    "a quarter"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "one third of a",
+                                "synonyms": [
+                                    "one third"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "two thirds of a",
+                                "synonyms": [
+                                    "two thirds"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "half a",
+                                "synonyms": [
+                                    "a half",
+                                    "half"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "few",
+                                "synonyms": [
+                                    "a few"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "couple",
+                                "synonyms": [
+                                    "a couple of",
+                                    "couple of"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MILLARD_fraction",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "half"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "quarter"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "ClearConsumptionEventIntent",
+                    "confirmationRequired": true,
+                    "prompts": {
+                        "confirmation": "Confirm.Intent.745928895086"
+                    },
+                    "slots": []
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Confirm.Intent.745928895086",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Are you sure you want to remove this whole event?"
+                    }
+                ]
+            }
+        ]
+    }
+}
