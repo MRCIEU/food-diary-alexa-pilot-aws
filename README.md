@@ -124,18 +124,6 @@ mysql -h <endpoint> fooddiary -P<port> -u admin -p -e "select * from intake_elem
 
 ```
 
-7. Add user
-
-```
-insert into user (creation_timestamp) values (NOW());
-```
-
-Check new user row:
-
-```
-select * from user;
-```
-
 
 
 
